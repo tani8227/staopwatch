@@ -6,16 +6,18 @@ let reset=document.getElementById('reset');
 var id;
 let sec=0;
 let min=0;
-let flag = false; 
+let flag = true; 
 
 // starting the time loop
 start.addEventListener('click',function()
 {
-     flag=true;
       start.style.background="#33b249";
       stop.style.background="";
-     id =setInterval(function()
+     if(flag==true)
      {
+        flag=false;
+        id =setInterval(function()
+       {
         dis.innerHTML=`${(min>9?min+`m`: '0'+min+`m`)} :${(sec>9?sec+`s`: '0'+sec+`s`)}`;
         if(sec==60)
         {
@@ -25,13 +27,14 @@ start.addEventListener('click',function()
         }
         sec++;
      },1000);
+     }
 })
 // stoping the time loop
 stop.addEventListener('click',function()
 {
-    if(flag==true)
+    if(flag==false)
     {
-
+        flag=true;
         clearInterval(id);
         stop.style.background="#dd7973";
         start.style.background="";
@@ -45,8 +48,9 @@ reset.addEventListener('click',function()
     sec=0;
     min=0;
     dis.innerHTML=`${(min>9?min+`m`: '0'+min+`m`)} :${(sec>9?sec+`s`: '0'+sec+`s`)}`;
-    if(flag==true)
+    if(flag==false)
     {
+        flag=true;
         clearInterval(id);
         start.style.background="";
       stop.style.background="";
