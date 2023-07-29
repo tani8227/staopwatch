@@ -18,12 +18,12 @@ body
 .display
 {
     width: 65%;
-    height:60%;
+    height:50%;
     background-color: white;
     margin: auto;
     margin-top: 20px;
-    padding-top:20px;
-    /* min-width:375px; */
+    padding-top: 50px;
+    
 
 }
 /* buttons */
@@ -47,12 +47,13 @@ button{
 
 #displaytext
 {
-    font-size: 5rem;
+    font-size: 3rem;
     width: 100%;
     text-align: center;
     color: black;
+    justify-self: center;
 }
-@media screen and (max-width:520px) {
+@media screen and (max-width:528px) {
     #displaytext
     {
         font-size: 3rem;
@@ -70,6 +71,27 @@ button{
     .display
     {
         height: 40%;
+    }
+    
+}
+@media screen and (max-width:451px) {
+    #displaytext
+    {
+        font-size: 2rem;
+        width: 100%;
+        text-align: center;
+    }
+    .button
+    {  
+        /* flex-direction: column; */
+        gap:10px;
+        font-size: larger;
+        padding-top: 50px;
+
+    }
+    .display
+    {
+        height: 30%;
     }
     
 }

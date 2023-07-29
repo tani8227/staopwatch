@@ -6,6 +6,7 @@ let reset=document.getElementById('reset');
 var id;
 let sec=0;
 let min=0;
+let hr=0;
 let flag = true; 
 
 // starting the time loop
@@ -18,11 +19,15 @@ start.addEventListener('click',function()
         flag=false;
         id =setInterval(function()
        {
-        dis.innerHTML=`${(min>9?min+`m`: '0'+min+`m`)} :${(sec>9?sec+`s`: '0'+sec+`s`)}`;
+        dis.innerHTML=`${(hr>9?hr+`h`: '0'+hr+`h`)}:${(min>9?min+`m`: '0'+min+`m`)} :${(sec>9?sec+`s`: '0'+sec+`s`)}`;
         if(sec==60)
         {
             sec=0
             min++;
+            if(min==59)
+            {
+                h++;
+            }
 
         }
         sec++;
