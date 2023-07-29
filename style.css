@@ -1,0 +1,68 @@
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width:375px;
+
+}
+/*main content of the stopwatch */
+.center
+{
+    width: 600px;
+    height:500px;
+    background-color: rgb(196, 192, 249);
+    min-width:375px;
+}
+.display
+{
+    width: 65%;
+    height:60%;
+    background-color: white;
+    margin: auto;
+    margin-top: 20px;
+    padding-top:20px;
+    /* min-width:375px; */
+
+}
+/* buttons */
+
+.button
+{   
+    width: 91%;
+    /* height: 30%; */
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    gap:50px;
+    margin:20px;
+}
+#displaytext
+{
+    font-size: 5rem;
+    width: 100%;
+    text-align: center;
+}
+@media screen and (max-width:520px) {
+    #displaytext
+    {
+        font-size: 3rem;
+        width: 100%;
+        text-align: center;
+    }
+    .button
+    {  
+        /* flex-direction: column; */
+        gap:10px;
+        font-size: larger;
+        padding-top: 50px;
+
+    }
+    .display
+    {
+        height: 40%;
+    }
+    
+}
+
+
