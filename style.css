@@ -4,6 +4,7 @@ body
     justify-content: center;
     align-items: center;
     min-width:375px;
+    background-color:#f5f5dc ;
 
 }
 /*main content of the stopwatch */
@@ -42,6 +43,7 @@ body
     font-size: 5rem;
     width: 100%;
     text-align: center;
+    color: black;
 }
 @media screen and (max-width:520px) {
     #displaytext
